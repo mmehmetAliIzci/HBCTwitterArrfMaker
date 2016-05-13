@@ -64,11 +64,13 @@ public class ArffFile implements Serializable {
             String biGramValues = "";
             for (int m = 0; m < 26; ++m) {
                 for (int n = 0; n < 26; ++n) {
+
                     biGramValues = biGramValues + "," + biGramMatrisList.get(i)[m][n];
                     //System.out.println(biGramValues);
                 }
             }
-            content.append(biGramValues).append(TweetValues.get(i)).append("\n");
+
+            content.append(TweetValues.get(i)).append(biGramValues).append("\n");
         }
 
 /*
